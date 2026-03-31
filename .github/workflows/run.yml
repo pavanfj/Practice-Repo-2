@@ -1,1 +1,16 @@
+name: Run My Code
 
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  run-code:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run script
+        run: echo "Hello, world!"
